@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" /> 
+    <title>Orfanato</title>
+
+
+    <link rel="icon" href="./public/imagens/logo-icon.png" />
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <link rel="stylesheet" href="./public/css/animation.css" />
+    <link rel="stylesheet" href="./public/css/sidebar.css" />
+    <link rel="stylesheet" href="./public/css/map.css" />
+    <link rel="stylesheet" href="./public/css/page-orphanage.css" />
+  </head>
+  <body id="">
+   <div id="page-orphanage">
+       <aside class="animate-right sidebar">
+         <img src="./public/imagens/map-marker.svg" alt="happy">
+          <footer>
+             <button onclick="history.back()"> 
+               <img src="./public/imagens/arrow-back.svg" alt="voltar">
+             </button> 
+          </footer>
+        </aside>
+          <main class="animate-appear with-sidebar">
+              <div class="orphanage-details">
+                <img src="./public/imagens/home.jpg" alt="orphanage">
+                 <div class="images">
+                  <button onclick="selectImage(event)" class="active" type="button"> 
+                    <img src="./public/imagens/img1.jpg" alt="orphanage">
+                  </buttom>
+                  <button onclick="selectImage(event)" type="button"> 
+                    <img src="./public/imagens/img2.jpg" alt="orphanage">
+                  </buttom>
+                  <button onclick="selectImage(event)" type="button"> 
+                    <img src="./public/imagens/img3.jpg" alt="orphanage">
+                  </buttom> 
+                  <button onclick="selectImage(event)" type="button"> 
+                    <img src="./public/imagens/img4.jpg" alt="orphanage">
+                  </buttom>
+                  <button onclick="selectImage(event)" type="button"> 
+                    <img src="./public/imagens/img5.jpg" alt="orphanage">
+                  </buttom> 
+                  <button onclick="selectImage(event)" type="button"> 
+                    <img src="./public/imagens/img1.jpg" alt="orphanage">
+                  </buttom>  
+                 </div>
+                   <div class="orphanage-details-content">
+                   <h1>Lar das meninas</h1>
+ <p>Presta assistencia a crian�as de 06 a 15 anosque se encontre em situa��o de risco e/ou vulnerabilidade social.</p>
+             
+                   <div class="map-container">
+                     <div id="mapid"> </div>   
+                     <footer>
+                       <a href="">Ver rotas no Google maps </a>
+                     </footer>
+                   </div>
+                 <hr/>
+              <h2>Instru��es para visita</h2>
+ <p>Venha como se sentir a vontade e traga muito amor paci�ncia para dar.   </p> 
+        <div class="open-details">
+             <div class="hour">
+                 <img src="./public/imagens/clock.svg" alt="hor�rios">
+                    hor�rio de vis�tas Das 18h as 8h           
+              </div>
+              <div class="open-on-weekends">
+                   <img src="./public/imagens/info.svg" alt="informa��es">
+                    Atendemos 
+                    fim de semana       
+              </div>
+        </div>     
+           <button class="primary-button" type="button">    
+             <img src="./public/imagens/whatsapp.svg" alt="chamar no whatsapp">
+                Entrar em contato
+           </button>   
+               </div>
+             </div> 
+          </main>  
+       </div> 
+    </div> 
+   <script src="./public/script/page-orphanages.js"></script>  
+  </body>
+</html>

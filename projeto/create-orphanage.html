@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    
+    <title>Adicionar um orfanato</title>
+<!-- AQUI VAI A BIBLIOTECA DE GEL LOCALIZAÇÃO  === CSS====  leaflet  -->
+
+<!-- AQUI VAI A BIBLIOTECA DE GEL LOCALIZAÇÃO ====JS====  leaflet  -->  
+
+    <link rel="icon" href="./public/imagens/logo-icon.png" />
+    <link rel="stylesheet" href="./public/css/main.css" />
+    <link rel="stylesheet" href="./public/css/animation.css" />
+    <link rel="stylesheet" href="./public/css/sidebar.css" />
+    <link rel="stylesheet" href="./public/css/map.css" />
+    <link rel="stylesheet" href="./public/css/page-create-orphanage.css" />
+  </head>
+  <body >
+     <div id="page-create-orphanage">
+       <aside class="animate-right sidebar">
+         <img src="./public/imagens/map-marker.svg" alt="happy">
+           <footer>
+             <button onclick="history.back()"> 
+               <img src="./public/imagens/arrow-back.svg" alt="voltar">
+             </button> 
+           </footer>
+        </aside>
+          <main class="animate-appear with-sidebar">
+              <form>
+                <fieldset>
+                  <legend>Dados</legend>
+                    <div class="map-container"> 
+		      <div class="mapid"> </div>
+                       <footer>
+                         <a href="#" id="select-point">
+             Clique no mapa para adicionar a localização             
+                         </a>
+                       </footer>                 
+                     </div>
+                   <div class="input-block">
+                    <label for="name">Nome</label>
+                     <input id="name" name="name">  
+                   </div>
+                   <div class="input-block">
+                    <label for="about">Sobre</label>
+                     <textarea id="about" name="about"></textarea>
+                   </div>
+                   <div class="input-block">
+                    <label for="whatsapp">número do whatsapp</label>
+                     <input id="whatsapp" name="whatsapp">  
+                   </div> 
+                   
+                </fieldset>
+                <fieldset>
+                  <legend>Visitação</legend>
+                </fieldset>
+              </form>
+          </main>  
+       </div> 
+   <script src="./public/script/page-create-orphanage.js"></script>  
+  </body>
+</html>
