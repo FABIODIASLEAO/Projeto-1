@@ -1,27 +1,30 @@
-//cria mapa
-const map = L.map("mapid").setView([-25.5350337, -49.1556336], 13);
 
-L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png").addTo(map);
 
-const icon = L.icon({
-  iconUrl: "./public/imagens/map-marker.svg",
-  iconSize: [58, 68],
-  iconAnchor: [24, 68],
-  popupAnchor: [170, 2],
-});
-const popup = L.popup({
-  closeButton: false,
-  className: "map-popup",
-  minWidth: 240,
-  minheight: 240,
-}).setContent(
-  'Moro Aqui<a href="orphanage.html?id=1" class="choose-orphanage"><img src="./public/imagens/arrow-white.svg"></a>'
-);
-//cria
+//cria mapa 
+ const map = L.map('mapid').setView([-25.5350337, -49.1556336], 13);
 
-L.marker([-25.5350337, -49.1556336], { icon: icon })
-  .addTo(map)
-  .bindPopup(popup);
+ L.tileLayer(
+       'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+
+  const icon = L.icon({
+    iconUrl: "./public/imagens/map-marker.svg",
+    iconSize :[58,68],
+    iconAnchor : [24,68],
+    popupAnchor : [170,2]
+  })
+  const popup = L.popup({
+     closeButton: false,
+     className: 'map-popup',
+     minWidth : 240,
+     minheight : 240,
+  
+  }).setContent('Moro Aqui<a href="orphanage.html?id=1" class="choose-orphanage"><img src="./public/imagens/arrow-white.svg"></a>')
+ //cria 
+ 
+ L.marker([-25.5350337, -49.1556336],{ icon:icon })
+ .addTo(map)
+ .bindPopup(popup)
 
 /*image gallery*/
 function selectImage(event) {
