@@ -12,46 +12,88 @@
     <link rel="stylesheet" href="./public/css/animation.css" />
     <link rel="stylesheet" href="./public/css/sidebar.css" />
     <link rel="stylesheet" href="./public/css/map.css" />
-    <link rel="stylesheet" href="./public/css/page-create-orphanage.css" />
+    <link rel="stylesheet" href="./public/css/form.css" />
+    <link rel="stylesheet" href="./public/css/buttons.css" />
+    <link rel="stylesheet" href="./public/css/page-create-orphanage.css"/>
   </head>
   <body >
      <div id="page-create-orphanage">
-       <aside class="animate-right sidebar">
-         <img src="./public/imagens/map-marker.svg" alt="happy">
-           <footer>
-             <button onclick="history.back()"> 
-               <img src="./public/imagens/arrow-back.svg" alt="voltar">
-             </button> 
-           </footer>
-        </aside>
-          <main class="animate-appear with-sidebar">
-              <form>
-                <fieldset>
-                  <legend>Dados</legend>
-                    <div class="map-container"> 
-		      <div class="mapid"> </div>
-                       <footer>
-                         <a href="#" id="select-point">
+    <aside class="animate-right sidebar">
+     <img src="./public/imagens/map-marker.svg" alt="happy">
+       <footer>
+        <button onclick="history.back()"> 
+         <img src="./public/imagens/arrow-back.svg" alt="voltar">
+        </button> 
+      </footer>
+    </aside>
+     <main class="animate-appear with-sidebar">
+       <form>
+         <fieldset>
+           <legend>Dados</legend>
+             <div class="map-container"> 
+	       <div class="mapid"> </div>
+               <input type="hidden" name="lat">
+               <input type="hidden" name="lng">           
+                <footer>
+                  <a href="#" id="select-point">
              Clique no mapa para adicionar a localização             
-                         </a>
-                       </footer>                 
-                     </div>
-                   <div class="input-block">
-                    <label for="name">Nome</label>
-                     <input id="name" name="name">  
-                   </div>
-                   <div class="input-block">
-                    <label for="about">Sobre</label>
-                     <textarea id="about" name="about"></textarea>
-                   </div>
-                   <div class="input-block">
-                    <label for="whatsapp">número do whatsapp</label>
-                     <input id="whatsapp" name="whatsapp">  
-                   </div> 
-                   
+                   </a>
+                 </footer>                 
+               </div>
+                <div class="input-block">
+                 <label for="name">Nome</label>
+                   <input id="name" name="name" required/>  
+                </div>
+                 <div class="input-block">
+                  <label for="about">Sobre<span>Maximo 300 caracteres</span></label>
+                  <textarea id="about" name="about" required></textarea>
+                 </div>
+                <div class="input-block">
+                 <label for="whatsapp">número do whatsapp</label>
+                  <input id="whatsapp" name="whatsapp">  
+                </div> 
+                 <div class="input-block images">
+                  <label for="images" required>Foto</label>
+                 <div class="images-upload" id="images">
+                 <div class="new-upload">
+  <input name="images" placeholder="Cole o link da foto aqui"/>
+  <span> 
+ <img src="./public/imagens/red-x.svg" alt="nova imagem">
+  </span>
+                 </div> 
+                 </div>
+ 		<button onclick="addPhotoField()">
+           <img src="./public/imagens/check.png" alt="nova imagem">
+		</button> 
+                </div>
                 </fieldset>
                 <fieldset>
-                  <legend>Visitação</legend>
+             <legend>Visitação</legend>
+         <div class="input-block">
+          <label for="instructions">Instruções<span>Maximo 300 caracteres</span></label>
+             <textarea id="instructions" name="instructions" required></textarea>
+         </div>
+            <div class="input-block">
+              <label for="opening-hours" required>Horário das visitas</label>
+                <input id="opening-hours" name="opening-hours">  
+           </div>
+            <div class="input-block">
+    <label for="open_on_weekends" required>Atende fim de semana?</label> 
+            <input 
+               type="hidden" 
+               id="open_on_weekends" 
+               name="open_on_weekends" 
+               value="1"
+               required
+             />
+           <div class="button-select">
+            <button type="button" class="active">Sim</button>  
+            <button type="button">Não</button>
+           </div>  
+            <button type="submit" class="primary-button">
+           Confirmar
+            </button>     
+             </div>
                 </fieldset>
               </form>
           </main>  
