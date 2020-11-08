@@ -1,2 +1,9 @@
-# Projeto 1
- primeiro projeto versionado
+
+## Tecnologias:
+
+- HTML<br>
+- CSS<br>
+- Javascript<br>
+
+<hr>
+
